@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/DubJeremy/Node-MondoDB-Course/issues"
   },
-  "homepage": "https://github.com/DubJeremy/Node-MondoDB-Course#readme"
+  "homepage": "https://github.com/DubJeremy/Node-MondoDB-Course#readme",
+  "dependencies": {
+    "mongoose": "^6.1.7"
+  }
 }
