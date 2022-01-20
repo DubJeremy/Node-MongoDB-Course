@@ -1,6 +1,13 @@
 const express = require('express');
-const app =express();
 const mongoose = require('mongoose');
+
+mongoose.connect('mongodb+srv://DubJeremy:MotdePassemongoDBsecu66@cluster0.utafe.mongodb.net/myFirstDatabase?retryWrites=true&w=majority',
+  { useNewUrlParser: true,
+    useUnifiedTopology: true })
+  .then(() => console.log('Connexion à MongoDB réussie !'))
+  .catch(() => console.log('Connexion à MongoDB échouée !'));
+
+const app =express();
 
 app.use((req, res, next) => {
   res.setHeader('Access-Control-Allow-Origin', '*');
@@ -40,9 +47,3 @@ app.get('/api/stuff', (req, res, next) => {
 });
 
 module.exports = app;
-
-mongoose.connect('mongodb+srv://DubJeremy:MotdePassemongoDBsecu66@cluster0.utafe.mongodb.net/myFirstDatabase?retryWrites=true&w=majority',
-  { useNewUrlParser: true,
-    useUnifiedTopology: true })
-  .then(() => console.log('Connexion à MongoDB réussie !'))
-  .catch(() => console.log('Connexion à MongoDB échouée !'));
