@@ -17,6 +17,7 @@
   },
   "homepage": "https://github.com/DubJeremy/Node-MondoDB-Course#readme",
   "dependencies": {
-    "mongoose": "^6.1.7"
+    "mongoose": "^6.1.7",
+    "mongoose-unique-validator": "^3.0.0"
   }
 }
